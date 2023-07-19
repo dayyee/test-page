@@ -10,6 +10,7 @@ const bodyParser = require("body-parser");
 const bcrypt = require("bcrypt");
 
 app.use(express.static(path.join(__dirname, "/build")));
+
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 

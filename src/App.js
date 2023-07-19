@@ -44,7 +44,7 @@ function Login(props) {
                 userId: id,
                 userPassword: password,
               };
-              fetch("http://localhost:3001/login", {
+              fetch("http://10.10.0.13:3001/login", {
                 //auth 주소에서 받을 예정
                 method: "post", // method :통신방법
                 headers: {
@@ -132,7 +132,7 @@ function Signin(props) {
                 userPassword: password,
                 userPassword2: password2,
               };
-              fetch("http://localhost:3001/signin", {
+              fetch("http://10.10.0.13:3001", {
                 //signin 주소에서 받을 예정
                 method: "post", // method :통신방법
                 headers: {
@@ -173,7 +173,7 @@ function App() {
   const [mode, setMode] = useState("");
 
   useEffect(() => {
-    fetch("http://localhost:3001/authcheck")
+    fetch("http://10.10.0.13:3001/authcheck")
       .then((res) => res.json())
       .then((json) => {
         if (json.isLogin === "True") {
